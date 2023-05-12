@@ -1,6 +1,6 @@
-import { Container, Dropdown, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import styles from './NavBar.module.scss';
+
 
 
 const NavBar = () => {

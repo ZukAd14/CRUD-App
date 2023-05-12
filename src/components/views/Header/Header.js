@@ -1,5 +1,5 @@
 import NavBar from '../NavBar/NavBar';
-import styles from './Header.module.scss';
+
 
 const Header = () => {
 

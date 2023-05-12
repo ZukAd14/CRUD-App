@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styles from './PostRender.module.scss';
+
 
 
 const PostRender = (props) => {

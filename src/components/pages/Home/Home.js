@@ -1,7 +1,6 @@
 import PostRender from '../../features/PostRender/PostRender';
 import { useSelector } from "react-redux";
 import { getAllPosts } from "../../../redux/postRedux";
-import styles from './Home.module.scss';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
