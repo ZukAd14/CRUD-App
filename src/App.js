@@ -5,11 +5,14 @@ import PostAdd from './components/pages/PostAdd/PostAdd';
 import PostEdit from './components/pages/PostEdit/PostEdit';
 import About from './components/pages/About/About';
 import WrongRoute from './components/pages/WrongRoute/WrongRoute';
-
+import { Container } from "react-bootstrap";
+import Header from "./components/views/Header/Header";
+import Footer from "./components/views/Footer/Footer";
 
 const App = () => {
   return (
-    <div>
+    <Container>
+      <Header />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/post/:id' element={<Post />} />
@@ -18,7 +21,8 @@ const App = () => {
         <Route path='/about' element={<About />} />
         <Route path='*' element={<WrongRoute />} />
       </Routes>
-    </div>
+      <Footer />
+    </Container>
   );
 };
 export default App;
