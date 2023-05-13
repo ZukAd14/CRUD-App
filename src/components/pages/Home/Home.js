@@ -12,7 +12,7 @@ const Home = () => {
             <div className='d-flex justify-content-between mb-5'>
                 <h1>All posts</h1>
                 <Link to={'/post/add'}>
-                <button type="button" class="btn btn-outline-info">Add post</button>
+                <button type="button" className="btn btn-outline-info">Add post</button>
                 </Link>
             </div>
             <div className='container'>

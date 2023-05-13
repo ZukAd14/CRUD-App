@@ -1,4 +1,4 @@
-import styles from './WrongRoute.module.scss';
+
 
 const WrongRoute = () => {
 

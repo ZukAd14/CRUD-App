@@ -1,9 +1,10 @@
-import styles from './PostAdd.module.scss';
+import AddPostForm from '../../features/AddPostForm/AddPostForm';
+
 
 const PostAdd = () => {
 
     return (
-        <p>PostAdd</p>
+        <AddPostForm />
     );
 };
 
