@@ -13,7 +13,7 @@ const PostRender = (props) => {
             <p><strong>Published:</strong> {props.publishedDate}</p>
             <p>{props.shortDescription}</p>
             <Link to={`/post/${props.id}`}>
-                <button type="button" class="btn btn-primary">Read more</button>
+                <button type="button" className="btn btn-primary">Read more</button>
             </Link>
         </div>
     );

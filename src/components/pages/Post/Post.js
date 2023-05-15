@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 
 
-const Post = props => {
+const Post = () => {
 
     const dispatch = useDispatch();
     const { id } = useParams();
