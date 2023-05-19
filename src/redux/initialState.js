@@ -5,7 +5,7 @@ const initialState = {
             title: 'Post1',
             shortDescription: 'short description of the article',
             content: 'Main content',
-            publishedDate: '01-03-2023',
+            publishedDate: new Date('01-03-2023'),
             author: 'John Doe',
         },
         {
@@ -13,7 +13,7 @@ const initialState = {
             title: 'Post2',
             shortDescription: 'short description of the article',
             content: 'Main content',
-            publishedDate: '09-03-2023',
+            publishedDate: new Date('09-03-2023'),
             author: 'Mark Wahlberg',
         },
         {
@@ -21,7 +21,7 @@ const initialState = {
             title: 'Post3',
             shortDescription: 'short description of the article',
             content: 'Main content',
-            publishedDate: '07-04-2023',
+            publishedDate: new Date('07-04-2023'),
             author: 'Jimmy Hendrix',
         },
         {
@@ -29,7 +29,7 @@ const initialState = {
             title: 'Post4',
             shortDescription: 'short description of the article',
             content: 'Main content',
-            publishedDate: '11-05-2023',
+            publishedDate: new Date('11-05-2023'),
             author: 'Ezio Auditore Da Firenze',
         }
     ]

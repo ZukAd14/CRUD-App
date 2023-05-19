@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getPostById, removePost } from '../../../redux/postRedux';
 import { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
-
+import dateToStr from '../../../utils/dateToStr';
 
 const Post = () => {
 
@@ -50,8 +50,9 @@ const Post = () => {
             </div>
             <div>
                 <p className='mt-4 mb-0'><strong>Author: </strong>{postData.author}</p>
-                <p className='mt-0 pt-0 mb-4'><strong>Published: </strong>{postData.publishedDate}</p>
-                <p>{postData.content}</p>
+                <p className='mt-0 pt-0 mb-4'><strong>Published: </strong>{dateToStr(postData.publishedDate)}</p>
+                
+                <p dangerouslySetInnerHTML={{ __html: postData.content }} />
             </div>
         </div>
     );

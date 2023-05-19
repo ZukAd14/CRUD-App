@@ -6,7 +6,7 @@ import PostForm from "../PostForm/PostForm";
 
 const AddPostForm = () => {
 
-    
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
 

@@ -20,7 +20,7 @@ const Home = () => {
                     {posts.map(post =>
                         <PostRender
                         key={post.id}
-                        {...post} />
+                        {...post}  />
                         )}
                 </div>
             </div>
