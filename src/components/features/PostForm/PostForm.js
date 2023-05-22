@@ -7,6 +7,9 @@ import 'react-quill/dist/quill.snow.css';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useForm } from "react-hook-form";
+import { useSelector } from 'react-redux';
+import { getAllCategories } from '../../../redux/categoriesRedux';
+
 
 
 const PostForm = ({ action, actionText, ...props }) => {
@@ -16,20 +19,31 @@ const PostForm = ({ action, actionText, ...props }) => {
     const [publishedDate, setPublishedDate] = useState(props.date || '');
     const [shortDescription, setShortDescription] = useState(props.description || '');
     const [content, setContent] = useState(props.content || '');
+    const [category, setCategory] = useState(props.category || '');
     const [contentError, setContentError] = useState(false);
     const [dateError, setDateError] = useState(false);
+    
 
+    
+    const categories = useSelector(getAllCategories);
+    //console.log('categoryId(state): ', categoryId)
+    //console.log('categoryName(state): ', categoryName);
+    //console.log('cID(const): ', cID);
+    //console.log('cName(const): ', cName)
+    //console.log('cID.catId(const): ', cID.catId);
 
+    
     const handleSubmit = () => {
         setContentError(!content)
         setDateError(!publishedDate)
         if(content && publishedDate){
-        action({ title, author, publishedDate, shortDescription, content });
+            action({ title, author, publishedDate, shortDescription, content, category });
         }
     };
+    
     const { register, handleSubmit: validate, formState: { errors } } = useForm();
 
-    console.log('pro: ', props, props.date)
+    //console.log('pro: ', props, props.date)
     return (
         <form className={styles.container} onSubmit={validate(handleSubmit)}>
             <h1>Add Post</h1>
@@ -70,6 +84,12 @@ const PostForm = ({ action, actionText, ...props }) => {
                     </Form.Group>
                 </Col>
             </Row>
+            <Form.Select aria-label='Default select example' onChange={e => setCategory(e.target.value)} >
+                <option hidden >{category || 'Select Category'} </option>
+                {categories.map(cat => (
+                    <option key={cat.id} value={cat.id}>{cat.name}</option>
+                ))}
+            </Form.Select>
             <Form.Group className="mb-2">
                 <Form.Label>Short description</Form.Label>
                 <Form.Control 

@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import dateToStr from '../../../utils/dateToStr';
 
+
 const Post = () => {
 
     const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const Post = () => {
         e.preventDefault();
         dispatch(removePost(postData.id));
     }
+    
 
     if(!postData) return <Navigate to='/' />
     else
@@ -50,8 +52,8 @@ const Post = () => {
             </div>
             <div>
                 <p className='mt-4 mb-0'><strong>Author: </strong>{postData.author}</p>
-                <p className='mt-0 pt-0 mb-4'><strong>Published: </strong>{dateToStr(postData.publishedDate)}</p>
-                
+                <p className='mt-0 pt-0 mb-0'><strong>Published: </strong>{dateToStr(postData.publishedDate)}</p>
+                <p className='mt-0 mb-4'><strong>Category: </strong>{postData.category}</p>
                 <p dangerouslySetInnerHTML={{ __html: postData.content }} />
             </div>
         </div>

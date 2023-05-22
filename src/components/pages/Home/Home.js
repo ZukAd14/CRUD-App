@@ -21,7 +21,8 @@ const Home = () => {
                         <PostRender
                         key={post.id}
                         {...post}  />
-                        )}
+                    )}
+                    {/*<PostRender />*/}
                 </div>
             </div>
         </div>
