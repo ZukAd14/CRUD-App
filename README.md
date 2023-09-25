@@ -2,7 +2,7 @@
 
 # CRUD Blog Application
 
-The CRUD Blog Application with Categories is a dynamic web application that allows users to Create, Read, Update, and Delete blog posts, now with the added feature of categorization. Here's a comprehensive description of its key features:
+The CRUD Blog Application with Categories is a dynamic web application that allows users to Create, Read, Update, and Delete blog posts. Here's a comprehensive description of its key features:
 
 ## Home Page
 - **Display Posts**: On the home page, all blog posts are displayed in rows of three.
